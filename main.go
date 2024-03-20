@@ -28,6 +28,8 @@ func main() {
 
 	corsHandler := handlers.CORS(allowedHeaders, allowedOrigins, allowedMethods)(r)
 
+	fmt.Printf("BUENA LOS PERROS :v")
+	fmt.Printf("Yuno API Go Corriendo ...")
 	err := http.ListenAndServe(":8081", corsHandler)
 	if err != nil {
 		fmt.Println(err.Error())
