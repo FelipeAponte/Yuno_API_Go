@@ -41,6 +41,7 @@ func yunoPay(w http.ResponseWriter, r *http.Request) {
 
 	url := "https://api-sandbox.y.uno/v1/payments"
 	payloadByte, _ := io.ReadAll(r.Body)
+	fmt.Println(string(payloadByte))
 	payload := strings.NewReader(string(payloadByte))
 
 	req, _ := http.NewRequest("POST", url, payload)
